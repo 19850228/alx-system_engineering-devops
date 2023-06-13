@@ -1,2 +1,2 @@
 #1/bin/bash
-touch hello  
+tail -n 10 /etc/passwd 
