@@ -36,8 +36,8 @@ defaults
 #--localitservices.tech-params-begins--
 backend localitservices.tech-backend
         balance roundrobin
-        server 22190-web-01 100.25.146.4 check
-        server 22190-web-02 54.210.111.105 check
+        server 22190-web-01 100.25.146.4:80 check
+        server 22190-web-02 54.210.111.105:80 check
 frontend localitservices.tech-frontend
         bind   0.0.0.0:443 ssl crt /etc/letsencrypt/archive/www.localitservices.tech/www.localitservices.tech.pem
         mode http
