@@ -8,6 +8,10 @@ Postmortem Project
 
 
 
+
+
+
+
 SUMMARY OF THE INCIDENT*
 
  **Duration:** The outage lasted approximately 4 hours, from 10:00 AM to 2:00 PM (GMT).
