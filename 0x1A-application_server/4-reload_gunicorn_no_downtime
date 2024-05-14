@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# This script reloads Gunicorn without downtime by gracefully restarting workers
+
+# Get the PID of Gunicorn master process
+master_pid=$(pgrep -f "gunicorn.*web_flask")
+
+# Check if Gunicorn master process is running
+if [ -z "$master_pid" ]; then
+    echo "Gunicorn master process is not running."
+    exit 1
+fi
+
+# Reload Gunicorn by sending HUP signal to master process
+kill -s HUP "$master_pid"
+
+echo "Gunicorn master process ($master_pid) is reloading..."
